@@ -2,6 +2,14 @@ module.exports = {
   env: {
     es2021: true,
   },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -31,4 +39,10 @@ module.exports = {
       { prefer: 'type-imports' },
     ],
   },
+  overrides: [
+    {
+      files: ['**/*.d.ts'],
+      rules: { '@typescript-eslint/consistent-type-imports': 'off' },
+    },
+  ],
 };
