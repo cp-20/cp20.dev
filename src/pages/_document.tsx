@@ -1,11 +1,6 @@
 import { ServerStyles, createStylesServer } from '@mantine/next';
-import Document, {
-  DocumentContext,
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document';
+import type { DocumentContext } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 import {
   GoogleTagManager,
   GoogleTagManagerBody,
