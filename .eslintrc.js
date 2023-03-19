@@ -9,6 +9,13 @@ module.exports = {
     'google',
     'prettier',
   ],
+  plugins: [
+    'react-hooks',
+    'react',
+    '@typescript-eslint',
+    'import',
+    'simple-import-sort',
+  ],
   rules: {
     'require-jsdoc': ['off'],
     'import/order': ['error', { alphabetize: { order: 'asc' } }],
