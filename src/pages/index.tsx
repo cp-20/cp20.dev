@@ -1,6 +1,6 @@
-import { css } from '@emotion/react';
 import type { NextPage } from 'next';
 import { Description } from '@/components/Description/Description';
+import { Layout } from '@/components/Layout/Layout';
 
 const Home: NextPage = () => {
   return (
@@ -10,19 +10,13 @@ const Home: NextPage = () => {
         description="Next.jsをMantine UIと一緒に色々セットアップしてあるオレオレテンプレートリポジトリです。ご利用は計画的に。"
       />
 
-      <div
-        css={css`
-          display: grid;
-          min-height: 100vh;
-          place-content: center;
-        `}
-      >
+      <Layout>
         <h1>Next.js with Mantine UI Template</h1>
         <p>
           Next.jsをMantine
           UIと一緒に色々セットアップしてあるオレオレテンプレートリポジトリです。ご利用は計画的に。
         </p>
-      </div>
+      </Layout>
     </>
   );
 };
