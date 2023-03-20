@@ -7,6 +7,13 @@ type LayoutProps = {
   children: ReactNode;
 };
 
+export const maxWidth = css`
+  width: 100vw;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+`;
+
 export const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
@@ -21,6 +28,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
         <main
           css={css`
             flex: 1;
+            ${maxWidth}
           `}
         >
           {children}
