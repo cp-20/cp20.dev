@@ -20,11 +20,6 @@ export const JavaScript = iconComponent(url('JavaScript'));
 export const TypeScript = iconComponent(url('TypeScript'));
 export const GoLang = iconComponent(url('GoLang'));
 export const Rust = iconComponent(url('Rust'));
-export const C = iconComponent(url('C'));
-export const CPP = iconComponent(url('CPP'));
-export const Dart = colorSchemeComponent('Dart');
-export const Markdown = colorSchemeComponent('Markdown');
-export const PHP = colorSchemeComponent('PHP');
 export const Python = colorSchemeComponent('Python');
 export const Regex = colorSchemeComponent('Regex');
 export const GraphQL = colorSchemeComponent('GraphQL');
@@ -37,9 +32,7 @@ export const Svelte = iconComponent(url('Svelte'));
 export const Astro = iconComponent(url('Astro'));
 export const Vite = colorSchemeComponent('Vite');
 export const SolidJS = colorSchemeComponent('SolidJS');
-export const Bootstrap = iconComponent(url('Bootstrap'));
 export const Electron = iconComponent(url('Electron'));
-export const Flutter = colorSchemeComponent('Flutter');
 export const NextJS = colorSchemeComponent('NextJS');
 export const NuxtJS = colorSchemeComponent('NuxtJS');
 
@@ -58,7 +51,6 @@ export const VSCode = colorSchemeComponent('VSCode');
 // platforms
 export const AWS = colorSchemeComponent('AWS');
 export const Azure = colorSchemeComponent('Azure');
-export const GCP = colorSchemeComponent('GCP');
 export const Vercel = colorSchemeComponent('Vercel');
 
 // services
@@ -66,7 +58,6 @@ export const Supabase = colorSchemeComponent('Supabase');
 export const Firebase = colorSchemeComponent('Firebase');
 export const Figma = colorSchemeComponent('Figma');
 export const GitHub = colorSchemeComponent('Github');
-export const GitLab = colorSchemeComponent('GitLab');
 
 // runtimes
 export const Deno = colorSchemeComponent('DENO');
