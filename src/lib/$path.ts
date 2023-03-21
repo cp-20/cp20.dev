@@ -5,7 +5,11 @@ export const pagesPath = {
 export type PagesPath = typeof pagesPath
 
 export const staticPath = {
-  avatar_png: '/avatar.png'
+  avatar_png: '/avatar.png',
+  og_images: {
+    dicespec_png: '/og-images/dicespec.png',
+    no_log_chat_png: '/og-images/no-log-chat.png'
+  }
 } as const
 
 export type StaticPath = typeof staticPath

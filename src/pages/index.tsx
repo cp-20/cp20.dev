@@ -5,6 +5,7 @@ import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
 import { SkillPanels } from '@/components/SkillSection/SkillPanels';
+import { WorkPanels } from '@/components/WorkSection/WorkPanels';
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +30,11 @@ const Home: NextPage = () => {
         <SectionTitle>SKILLS</SectionTitle>
         <Section>
           <SkillPanels />
+        </Section>
+
+        <SectionTitle>WORKS</SectionTitle>
+        <Section>
+          <WorkPanels />
         </Section>
       </Layout>
     </>
