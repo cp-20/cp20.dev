@@ -17,7 +17,7 @@ export const Footer: FC = () => {
   return (
     <footer
       css={css`
-        background-color: ${color(colors.gray[0], 'rgba(255,255,255, 0.05)')};
+        background-color: ${color(colors.gray[1], 'rgba(255,255,255, 0.05)')};
       `}
     >
       <div

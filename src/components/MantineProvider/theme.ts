@@ -8,4 +8,14 @@ export const theme: Partial<MantineTheme> = {
     lg: '1200px',
     xl: '1400px',
   },
+
+  globalStyles: (theme) => ({
+    body: {
+      ...theme.fn.fontStyles(),
+      backgroundColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[7]
+          : theme.colors.gray[0],
+    },
+  }),
 };

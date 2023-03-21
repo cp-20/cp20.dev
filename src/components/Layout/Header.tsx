@@ -16,10 +16,10 @@ export const Header: FC = () => {
   return (
     <header
       css={css`
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: ${color('white', 'rgba(255, 255, 255, 0.05)')};
 
         ${colorScheme === 'light' &&
-        `box-shadow: ${colors.gray[0]} 0 0 4px 4px;`}
+        `box-shadow: ${colors.gray[1]} 0 0 4px 4px;`}
       `}
     >
       <div
