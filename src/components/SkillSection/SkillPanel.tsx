@@ -36,7 +36,7 @@ export const SkillPanel: FC<SkillPanelProps> = ({ skill }) => {
               margin-bottom: 8px;
             `}
           >
-            <Rating defaultValue={skill.level} readOnly />
+            <Rating value={skill.level} readOnly />
           </p>
           <Group
             spacing="8px"
