@@ -1,21 +1,27 @@
+import { Title } from '@mantine/core';
 import type { NextPage } from 'next';
 import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
+import { Section, SectionTitle } from '@/components/Layout/Section';
+import { SkillPanels } from '@/components/SkillSection/SkillPanels';
 
 const Home: NextPage = () => {
   return (
     <>
       <Description
-        title="Next.js with Mantine UI Template"
-        description="Next.jsをMantine UIと一緒に色々セットアップしてあるオレオレテンプレートリポジトリです。ご利用は計画的に。"
+        title="しーぴー"
+        description="しーぴーくんの生態がわかるサイトです"
       />
 
       <Layout>
-        <h1>Next.js with Mantine UI Template</h1>
-        <p>
-          Next.jsをMantine
-          UIと一緒に色々セットアップしてあるオレオレテンプレートリポジトリです。ご利用は計画的に。
-        </p>
+        <Title order={1} ff="Consolas">
+          cp20.dev
+        </Title>
+
+        <SectionTitle>SKILLS</SectionTitle>
+        <Section>
+          <SkillPanels />
+        </Section>
       </Layout>
     </>
   );
