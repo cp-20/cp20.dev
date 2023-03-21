@@ -1,11 +1,28 @@
+import { css } from '@emotion/react';
+import { Title, useMantineTheme } from '@mantine/core';
 import type { FC, ReactNode } from 'react';
+import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 
 type SectionTitleProps = {
   children: ReactNode;
 };
 
 export const SectionTitle: FC<SectionTitleProps> = ({ children }) => {
-  return <h2>{children}</h2>;
+  const { color } = useColorScheme();
+  const { colors } = useMantineTheme();
+
+  return (
+    <Title
+      order={2}
+      css={css`
+        padding: 4px 8px;
+        border-bottom: solid ${color(colors.gray[3], colors.gray[7])} 1px;
+        margin: 16px 0;
+      `}
+    >
+      {children}
+    </Title>
+  );
 };
 
 type SectionProps = {

@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import { Title } from '@mantine/core';
 import type { NextPage } from 'next';
 import { Description } from '@/components/Description/Description';
@@ -14,7 +15,14 @@ const Home: NextPage = () => {
       />
 
       <Layout>
-        <Title order={1} ff="Consolas">
+        <Title
+          order={1}
+          ff="Consolas"
+          align="center"
+          css={css`
+            margin: 32px 0;
+          `}
+        >
           cp20.dev
         </Title>
 
