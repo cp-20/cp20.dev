@@ -9,7 +9,7 @@ type SkillPanelProps = {
 
 export const SkillPanel: FC<SkillPanelProps> = ({ skill }) => {
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
+    <Card shadow="sm" padding="lg" radius="md">
       <Badge color="teal" mb="8px">
         {skill.category}
       </Badge>
@@ -31,13 +31,13 @@ export const SkillPanel: FC<SkillPanelProps> = ({ skill }) => {
           >
             {skill.name}
           </p>
-          <p
+          <div
             css={css`
               margin-bottom: 8px;
             `}
           >
             <Rating value={skill.level} readOnly />
-          </p>
+          </div>
           <Group
             spacing="8px"
             css={css`
