@@ -1,7 +1,7 @@
 import { SimpleGrid } from '@mantine/core';
 import type { FC } from 'react';
 import { SkillPanel } from '@/components/SkillSection/SkillPanel';
-import { skills } from '@/lib/skill';
+import { skills } from '@/lib/skills';
 
 export const SkillPanels: FC = () => {
   return (
