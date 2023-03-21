@@ -8,7 +8,7 @@ type LayoutProps = {
 };
 
 export const maxWidth = css`
-  width: 100vw;
+  width: 100%;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
@@ -28,6 +28,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
         <main
           css={css`
             flex: 1;
+            padding: 16px;
             ${maxWidth}
           `}
         >
