@@ -5,6 +5,7 @@ import {
 } from '@mantine/core';
 import type { FC, ReactNode } from 'react';
 import { useEffect, useState } from 'react';
+import { theme } from '@/components/MantineProvider/theme';
 
 type MantineProviderWithColorSchemeProps = {
   children: ReactNode;
@@ -40,13 +41,7 @@ export const MantineProviderWithColorScheme: FC<
       <MantineProvider
         theme={{
           colorScheme,
-          breakpoints: {
-            xs: '360px',
-            sm: '800px',
-            md: '1000px',
-            lg: '1200px',
-            xl: '1400px',
-          },
+          ...theme,
         }}
         withGlobalStyles
         withNormalizeCSS
