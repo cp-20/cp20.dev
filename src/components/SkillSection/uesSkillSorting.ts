@@ -3,11 +3,6 @@ import type { skill } from '@/lib/skills';
 
 type sortTabId = 'category' | 'level';
 
-export const sortTabData: { value: sortTabId; label: string }[] = [
-  { value: 'category', label: 'Sort by Category' },
-  { value: 'level', label: 'Sort by Level' },
-];
-
 type sortFunction = (a: skill, b: skill) => number;
 
 const getSortFunction = (sortTab: sortTabId): sortFunction => {
