@@ -5,6 +5,7 @@ import { ArticlePanels } from '@/components/ArticleSection/ArticlePanels';
 import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
+import { PresentationPanels } from '@/components/PresentationSection/PresentationPanels';
 import { SkillPanels } from '@/components/SkillSection/SkillPanels';
 import { WorkPanels } from '@/components/WorkSection/WorkPanels';
 
@@ -41,6 +42,11 @@ const Home: NextPage = () => {
         <SectionTitle>ARTICLES</SectionTitle>
         <Section>
           <ArticlePanels />
+        </Section>
+
+        <SectionTitle>PRESENTATIONS</SectionTitle>
+        <Section>
+          <PresentationPanels />
         </Section>
       </Layout>
     </>
