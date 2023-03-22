@@ -8,8 +8,8 @@ export const SkillPanels: FC = () => {
     <SimpleGrid
       cols={3}
       breakpoints={[
-        { maxWidth: 1160, cols: 2, spacing: 'md' },
-        { maxWidth: 800, cols: 1, spacing: 'md' },
+        { maxWidth: 1160, cols: 2 },
+        { maxWidth: 800, cols: 1 },
       ]}
     >
       {skills.map((skill) => (
