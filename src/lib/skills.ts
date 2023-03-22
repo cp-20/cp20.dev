@@ -39,7 +39,7 @@ import {
   Vite,
   VSCode,
   Vue,
-} from '@/components/Icons/Icons';
+} from '@/components/Icons/SkillIcons';
 
 export type category =
   | 'language'
