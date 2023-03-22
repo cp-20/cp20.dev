@@ -22,7 +22,16 @@ export const WorkPanel: FC<WorkPanelProps> = ({ work }) => {
         text-decoration: none;
       `}
     >
-      <Card shadow="sm" padding="lg" radius="md" css={cardHoverTransition}>
+      <Card
+        shadow="sm"
+        padding="lg"
+        radius="md"
+        css={css`
+          height: 100%;
+
+          ${cardHoverTransition}
+        `}
+      >
         <Card.Section withBorder>
           <AspectRatio
             ratio={960 / 540}
