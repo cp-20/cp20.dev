@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { Title } from '@mantine/core';
 import type { NextPage } from 'next';
+import { ArticlePanels } from '@/components/ArticleSection/ArticlePanels';
 import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
@@ -35,6 +36,11 @@ const Home: NextPage = () => {
         <SectionTitle>WORKS</SectionTitle>
         <Section>
           <WorkPanels />
+        </Section>
+
+        <SectionTitle>ARTICLES</SectionTitle>
+        <Section>
+          <ArticlePanels />
         </Section>
       </Layout>
     </>
