@@ -17,7 +17,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children }) => {
       css={css`
         padding: 4px 8px;
         border-bottom: solid ${color(colors.gray[3], colors.gray[7])} 1px;
-        margin: 16px 0;
+        margin: 64px 0 24px;
       `}
     >
       {children}
