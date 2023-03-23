@@ -1,9 +1,9 @@
-import { css } from '@emotion/react';
-import { AspectRatio, Card, useMantineTheme } from '@mantine/core';
+import { AspectRatio, Card } from '@mantine/core';
 import dayjs from 'dayjs';
 import type { FC } from 'react';
 import { ClickablePanel } from '@/components/ClickablePanel/ClickablePanel';
-import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
+import { PanelAffix } from '@/components/ClickablePanel/PanelAffix';
+import { PanelTitle } from '@/components/ClickablePanel/PanelTitle';
 import type { article } from '@/lib/articles';
 
 type ArticlePanelProps = {
@@ -11,9 +11,6 @@ type ArticlePanelProps = {
 };
 
 export const ArticlePanel: FC<ArticlePanelProps> = ({ article }) => {
-  const { color } = useColorScheme();
-  const { colors } = useMantineTheme();
-
   return (
     <ClickablePanel url={article.url}>
       <Card.Section>
@@ -24,24 +21,8 @@ export const ArticlePanel: FC<ArticlePanelProps> = ({ article }) => {
           />
         </AspectRatio>
       </Card.Section>
-      <p
-        css={css`
-          margin-top: 16px;
-          color: ${color(colors.gray[8], colors.gray[3])};
-          font-weight: bold;
-        `}
-      >
-        {article.title}
-      </p>
-      <p
-        css={css`
-          padding-top: 8px;
-          margin-top: auto;
-          color: ${color(colors.gray[6], colors.gray[5])};
-        `}
-      >
-        {dayjs(article.created_at).format('YYYY/MM/DD')}
-      </p>
+      <PanelTitle>{article.title}</PanelTitle>
+      <PanelAffix>{dayjs(article.created_at).format('YYYY/MM/DD')}</PanelAffix>
     </ClickablePanel>
   );
 };
