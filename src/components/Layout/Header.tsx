@@ -36,7 +36,7 @@ export const Header: FC = () => {
           css={css`
             display: flex;
             align-items: center;
-            padding: 8px 16px;
+            padding: 12px 16px;
             color: inherit;
             text-decoration: none;
             transition: all 0.2s;
@@ -68,7 +68,10 @@ export const Header: FC = () => {
           <span
             css={css`
               margin-left: 4px;
-              font-size: 1rem;
+              color: ${color(colors.gray[7], colors.gray[4])};
+              font-family: Consolas, sans-serif;
+              font-size: 1.2rem;
+              font-weight: bold;
             `}
           >
             cp20.dev
