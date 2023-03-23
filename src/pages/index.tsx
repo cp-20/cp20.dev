@@ -29,22 +29,24 @@ const Home: NextPage = () => {
           cp20.dev
         </Title>
 
-        <SectionTitle>SKILLS</SectionTitle>
+        <SectionTitle subtitle="技術スキル">SKILLS</SectionTitle>
         <Section>
           <SkillPanels />
         </Section>
 
-        <SectionTitle>WORKS</SectionTitle>
+        <SectionTitle subtitle="制作したものたち">WORKS</SectionTitle>
         <Section>
           <WorkPanels />
         </Section>
 
-        <SectionTitle>ARTICLES</SectionTitle>
+        <SectionTitle subtitle="執筆してきた記事たち">ARTICLES</SectionTitle>
         <Section>
           <ArticlePanels />
         </Section>
 
-        <SectionTitle>PRESENTATIONS</SectionTitle>
+        <SectionTitle subtitle="登壇したイベントたち">
+          PRESENTATIONS
+        </SectionTitle>
         <Section>
           <PresentationPanels />
         </Section>
