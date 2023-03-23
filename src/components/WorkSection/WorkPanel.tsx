@@ -13,7 +13,7 @@ type WorkPanelProps = {
 
 export const WorkPanel: FC<WorkPanelProps> = ({ work }) => {
   return (
-    <ClickablePanel url={`works/${work}`}>
+    <ClickablePanel url={`/works/${work.id}`}>
       <Card.Section withBorder>
         <AspectRatio
           ratio={960 / 540}
