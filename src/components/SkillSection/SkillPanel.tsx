@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { Badge, Card, Group, Rating } from '@mantine/core';
 import type { FC } from 'react';
-import type { skill } from '@/lib/skill';
+import type { skill } from '@/lib/skills';
 
 type SkillPanelProps = {
   skill: skill;
