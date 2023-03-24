@@ -67,7 +67,7 @@ export const Header: FC = () => {
           />
           <span
             css={css`
-              margin-left: 4px;
+              margin-left: 8px;
               color: ${color(colors.gray[7], colors.gray[4])};
               font-family: Consolas, sans-serif;
               font-size: 1.2rem;
