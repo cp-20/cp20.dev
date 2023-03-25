@@ -7,7 +7,7 @@ import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
 import { PresentationPanels } from '@/components/PresentationSection/PresentationPanels';
 import { Profile } from '@/components/ProfileSection/Profile';
-import { SkillPanels } from '@/components/SkillSection/SkillPanels';
+import { SkillSection } from '@/components/SkillSection/SkillSection';
 import { WorkPanels } from '@/components/WorkSection/WorkPanels';
 
 const Home: NextPage = () => {
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
         <SectionTitle subtitle="技術スキル">SKILLS</SectionTitle>
         <Section>
-          <SkillPanels />
+          <SkillSection />
         </Section>
 
         <SectionTitle subtitle="制作したものたち">WORKS</SectionTitle>
