@@ -15,7 +15,7 @@ export const PanelTitle: FC<PanelTitleProps> = ({ children }) => {
     <p
       css={css`
         margin-top: 16px;
-        color: ${color(colors.gray[8], colors.gray[3])};
+        color: ${color(colors.gray[8], colors.gray[4])};
         font-weight: bold;
       `}
     >
