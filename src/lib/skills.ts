@@ -63,7 +63,7 @@ export type tag =
   | 'robotics'
   | 'git';
 
-export type level = 0 | 1 | 2 | 3 | 4 | 5;
+export type level = 0 | 1 | 2 | 3 | 4;
 
 export type skill = {
   icon: ReactNode;
