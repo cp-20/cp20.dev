@@ -3,6 +3,7 @@ import type { CardProps } from '@mantine/core';
 import { Card } from '@mantine/core';
 import Link from 'next/link';
 import type { FC, ReactNode } from 'react';
+import { useLink } from '@/components/ui/DefaultLink';
 import { cardHoverTransition } from '@/styles/cardHoverTransition';
 
 type ClickablePanel = {
@@ -15,13 +16,11 @@ export const ClickablePanel: FC<ClickablePanel> = ({
   children,
   ...props
 }) => {
-  const isExternalUrl = !url.startsWith('/');
+  const hrefObject = useLink(url);
 
   return (
     <Link
-      href={url}
-      target={isExternalUrl ? '_blank' : undefined}
-      rel={isExternalUrl ? 'noopener noreferrer' : undefined}
+      {...hrefObject}
       css={css`
         text-decoration: none;
       `}
