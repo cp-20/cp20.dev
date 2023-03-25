@@ -7,6 +7,7 @@ import { useMediaQuery } from '@mantine/hooks';
 import { IconMedal, IconTags } from '@tabler/icons-react';
 import type { FC, ReactNode } from 'react';
 import { SkillPanel } from '@/components/SkillSection/SkillPanel';
+import { SkillTransitionWrapper } from '@/components/SkillSection/SkillTransitonWrapper';
 import { ViewRawDataButton } from '@/components/SkillSection/ViewRawDataButton';
 import { useSKillSorting } from '@/components/SkillSection/uesSkillSorting';
 import { skills } from '@/lib/skills';
@@ -81,8 +82,10 @@ export const SkillPanels: FC = () => {
           { maxWidth: 800, cols: 1 },
         ]}
       >
-        {sortedSkills.map((skill) => (
-          <SkillPanel key={skill.name} skill={skill} />
+        {sortedSkills.map((skill, i) => (
+          <SkillTransitionWrapper key={skill.name} delay={0.03 * i + 0.1}>
+            <SkillPanel skill={skill} />
+          </SkillTransitionWrapper>
         ))}
       </SimpleGrid>
     </div>
