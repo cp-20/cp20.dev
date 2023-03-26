@@ -30,15 +30,22 @@ export const GoogleTagManager: FC<GoogleTagManagerProps> = ({ nonce }) => {
   return <></>;
 };
 
-export const GoogleTagManagerBody: FC = () => (
-  <>
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-PPZFTWD"
-        height="0"
-        width="0"
-        style={{ display: 'none', visibility: 'hidden' }}
-      />
-    </noscript>
-  </>
-);
+export const GoogleTagManagerBody: FC = () => {
+  const id = process.env.NEXT_PUBLIC_GTM_ID;
+
+  if (id) {
+    return (
+      <>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PPZFTWD"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+      </>
+    );
+  }
+  return <></>;
+};
