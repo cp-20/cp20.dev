@@ -2,7 +2,7 @@ import { SimpleGrid } from '@mantine/core';
 import type { FC } from 'react';
 import { SkillPanel } from '@/components/SkillSection/SkillPanel';
 import { SkillTransitionWrapper } from '@/components/SkillSection/SkillTransitionWrapper';
-import type { skill } from '@/lib/skills';
+import type { skill } from '@/lib/data/skills';
 
 type SkillPanelsProps = {
   skills: skill[];
