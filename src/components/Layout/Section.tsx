@@ -37,7 +37,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       y: 64,
       delay: id.length * 0.05 + 0.5,
       ease: 'power4.out',
-      duration: 1,
+      duration: 0.5,
       scrollTrigger: {
         trigger: titleRef.current,
         start: '50% 60%',
