@@ -2,8 +2,8 @@ import { css } from '@emotion/react';
 import { useMantineTheme } from '@mantine/core';
 import type { FC } from 'react';
 import { maxWidth } from '@/components/Layout/Layout';
-import { SocialLinkButton } from '@/components/Layout/SocialLinkButton';
 import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
+import { ActionIconLink } from '@/components/ui/ActionIconLink';
 import { socials } from '@/lib/socials';
 
 export const Footer: FC = () => {
@@ -32,9 +32,9 @@ export const Footer: FC = () => {
           `}
         >
           {socials.map((social) => (
-            <SocialLinkButton key={social.url} href={social.url}>
+            <ActionIconLink key={social.url} href={social.url} variant="filled">
               {social.icon}
-            </SocialLinkButton>
+            </ActionIconLink>
           ))}
         </div>
       </div>
