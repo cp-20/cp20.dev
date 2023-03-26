@@ -103,7 +103,7 @@ export const SkillSection: FC = () => {
         </ViewRawDataButton>
       </Group>
 
-      <SkillPanels skills={sortedSkills} />
+      <SkillPanels sortKey={sortTab} skills={sortedSkills} />
     </div>
   );
 };

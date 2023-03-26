@@ -15,6 +15,14 @@ export const SkillTransitionWrapper: FC<SkillTransitionWrapperProps> = ({
   const wrapperElement = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    gsap.set(wrapperElement.current, {
+      rotateX: -90,
+      rotateZ: -10,
+      autoAlpha: 0,
+    });
+  }, []);
+
+  useEffect(() => {
     const timeline = gsap
       .timeline()
       .to(wrapperElement.current, {
@@ -34,7 +42,7 @@ export const SkillTransitionWrapper: FC<SkillTransitionWrapperProps> = ({
     return () => {
       timeline.kill();
     };
-  });
+  }, [delay]);
 
   return <div ref={wrapperElement}>{children}</div>;
 };
