@@ -13,8 +13,9 @@ type SectionTitleProps = {
 };
 
 export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const titleBorderRef = useRef<HTMLHeadingElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const subtitleRef = useRef<HTMLSpanElement>(null);
   const { color } = useColorScheme();
   const { colors } = useMantineTheme();
 
@@ -22,9 +23,19 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(titleBorderRef.current, {
+      scaleX: 1,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: '50% 60%',
+      },
+    });
+
     gsap.to(`.section-title-char-${id}`, {
       y: -64,
-      stagger: 0.05,
+      stagger: 0.02,
       ease: 'back.out',
       duration: 0.5,
       scrollTrigger: {
@@ -35,9 +46,9 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
 
     gsap.to(subtitleRef.current, {
       y: 64,
-      delay: id.length * 0.05 + 0.5,
+      delay: id.length * 0.02 + 0.5,
       ease: 'power4.out',
-      duration: 0.5,
+      duration: 0.3,
       scrollTrigger: {
         trigger: titleRef.current,
         start: '50% 60%',
@@ -55,7 +66,6 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       <Title
         order={2}
         css={css`
-          border-bottom: solid ${color(colors.gray[3], colors.gray[7])} 1px;
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           color: ${color(colors.gray[9], colors.gray[3])};
           font-family: Consolas, monospace;
@@ -80,6 +90,14 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
             </span>
           ))}
         </div>
+        <div
+          css={css`
+            height: 1px;
+            background-color: ${color(colors.gray[3], colors.gray[7])};
+            transform: scaleX(0);
+          `}
+          ref={titleBorderRef}
+        />
       </Title>
       <p
         css={css`
