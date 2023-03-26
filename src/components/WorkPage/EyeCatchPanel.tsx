@@ -16,18 +16,25 @@ export const EyeCatchPanel: FC<EyeCatchPanelProps> = ({
   imageSrc,
 }) => {
   return (
-    <ClickablePanel url={url} maw="480px" mx="auto">
-      <Card.Section>
-        <AspectRatio
-          ratio={ratio}
-          css={css`
-            position: relative;
-            width: 100%;
-          `}
-        >
-          <Image src={imageSrc} alt="" fill />
-        </AspectRatio>
-      </Card.Section>
-    </ClickablePanel>
+    <div
+      css={css`
+        max-width: 480px;
+        margin: 0 auto;
+      `}
+    >
+      <ClickablePanel url={url}>
+        <Card.Section>
+          <AspectRatio
+            ratio={ratio}
+            css={css`
+              position: relative;
+              width: 100%;
+            `}
+          >
+            <Image src={imageSrc} alt="" fill />
+          </AspectRatio>
+        </Card.Section>
+      </ClickablePanel>
+    </div>
   );
 };
