@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import {
   Avatar,
   Center,
+  Group,
   SimpleGrid,
   Space,
   useMantineTheme,
@@ -9,8 +10,11 @@ import {
 import type { FC } from 'react';
 import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 import { ProfileMessage } from '@/components/ProfileSection/ProfileMessage';
+import { ActionIconLink } from '@/components/ui/ActionIconLink';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 import { DefaultLink } from '@/components/ui/DefaultLink';
-import { staticPath } from '@/lib/$path';
+import { pagesPath, staticPath } from '@/lib/$path';
+import { socials } from '@/lib/socials';
 
 export const Profile: FC = () => {
   const { color, colorScheme } = useColorScheme();
@@ -70,6 +74,29 @@ export const Profile: FC = () => {
           しーぴー
         </p>
         <Space h="md" />
+        <Group
+          spacing="xs"
+          css={css`
+            @media screen and (max-width: 480px) {
+              justify-content: center;
+            }
+          `}
+        >
+          {socials('lg').map((social) => (
+            <ActionIconLink
+              key={social.url}
+              href={social.url}
+              variant="light"
+              size="lg"
+              css={css`
+                ${colorScheme === 'light' && `color: ${social.color}`};
+              `}
+            >
+              {social.icon}
+            </ActionIconLink>
+          ))}
+        </Group>
+        <Space h="md" />
         <ProfileMessage
           label="所属"
           message={
@@ -85,6 +112,11 @@ export const Profile: FC = () => {
         <Space h="md" />
         <ProfileMessage label="好きな技術" message="Webフロント系全般" />
         <Space h="md" />
+        <ProfileMessage
+          label="趣味"
+          message="アニメ / 漫画 / ボカロ / マイクラ"
+        />
+        <Space h="md" />
         <p
           css={css`
             color: ${colors.gray[6]};
@@ -97,6 +129,14 @@ export const Profile: FC = () => {
           </DefaultLink>
           さんのをお借りしています
         </p>
+        <Space h="md" />
+        <ButtonLink
+          href={pagesPath.profile.$url()}
+          variant="subtle"
+          color="teal"
+        >
+          もっと見る
+        </ButtonLink>
       </div>
     </SimpleGrid>
   );
