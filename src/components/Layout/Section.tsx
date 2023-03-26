@@ -29,7 +29,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       duration: 0.5,
       scrollTrigger: {
         trigger: titleRef.current,
-        start: '50% 90%',
+        start: '100% 90%',
       },
     });
 
@@ -40,7 +40,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       duration: 0.5,
       scrollTrigger: {
         trigger: titleRef.current,
-        start: '50% 90%',
+        start: '100% 90%',
       },
     });
 
@@ -51,7 +51,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       duration: 0.3,
       scrollTrigger: {
         trigger: titleRef.current,
-        start: '50% 90%',
+        start: '100% 90%',
       },
     });
   }, [id]);
@@ -142,7 +142,7 @@ export const Section: FC<SectionProps> = ({ children }) => {
       duration: 0.5,
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: '50% 90%',
+        start: '0 90%',
       },
     });
   }, []);
