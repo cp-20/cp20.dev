@@ -8,7 +8,6 @@ import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 export const useLink = (href: LinkProps['href']) => {
   const url = typeof href === 'string' ? href : href.pathname ?? '';
   const isExternalUrl = !url.startsWith('/');
-  console.log(href, isExternalUrl);
 
   return {
     href,
