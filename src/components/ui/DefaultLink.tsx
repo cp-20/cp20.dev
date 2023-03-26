@@ -31,7 +31,15 @@ export const DefaultLink: FC<DefaultLinkProps> = ({ href, ...props }) => {
       {...props}
       css={css`
         padding: 0 2px;
-        color: ${color(colors.teal[5], colors.teal[6])};
+        color: ${color(colors.teal[6], colors.teal[6])};
+
+        &:hover {
+          color: ${color(colors.teal[5], colors.teal[7])};
+        }
+
+        &:active {
+          color: ${color(colors.teal[4], colors.teal[8])};
+        }
       `}
     />
   );
