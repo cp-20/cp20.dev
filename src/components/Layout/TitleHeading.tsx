@@ -14,10 +14,10 @@ export const TitleHeading: FC<TitleHeadingProps> = (props) => {
   return (
     <Title
       order={1}
-      ff="Consolas"
       align="center"
       css={css`
         margin-bottom: 64px;
+        font-family: Consolas, monospace;
       `}
       color={color(colors.gray[9], colors.gray[2])}
       {...props}

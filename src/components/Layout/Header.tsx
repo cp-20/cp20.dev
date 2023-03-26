@@ -68,7 +68,7 @@ export const Header: FC = () => {
             css={css`
               margin-left: 8px;
               color: ${color(colors.gray[8], colors.gray[3])};
-              font-family: Consolas, sans-serif;
+              font-family: Consolas, monospace;
               font-size: 1.2rem;
               font-weight: bold;
             `}

@@ -24,7 +24,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
         css={css`
           border-bottom: solid ${color(colors.gray[3], colors.gray[7])} 1px;
           color: ${color(colors.gray[9], colors.gray[3])};
-          font-family: Consolas, sans-serif;
+          font-family: Consolas, monospace;
           font-size: 2rem;
           text-align: center;
         `}
