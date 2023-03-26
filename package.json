@@ -31,6 +31,7 @@
     "@mantine/prism": "^6.0.4",
     "@tabler/icons-react": "^2.10.0",
     "dayjs": "^1.11.7",
+    "framer-motion": "^10.9.1",
     "gsap": "^3.11.5",
     "jotai": "^2.0.3",
     "next": "^13.2.4",

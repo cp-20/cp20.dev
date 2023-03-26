@@ -1,4 +1,6 @@
 import { css } from '@emotion/react';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import type { FC, ReactNode } from 'react';
 import { Footer } from '@/components/Layout/Footer';
 import { Header } from '@/components/Layout/Header';
@@ -15,6 +17,8 @@ export const maxWidth = css`
 `;
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
+  const { asPath } = useRouter();
+
   return (
     <>
       <div
@@ -25,16 +29,29 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
         `}
       >
         <Header />
-        <main
-          css={css`
-            flex: 1;
-            padding: 64px 16px;
-            ${maxWidth}
-          `}
+        <motion.div
+          key={asPath}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 30 }}
+          transition={{
+            type: 'spring',
+            stiffness: 260,
+            damping: 20,
+            duration: 0.5,
+          }}
         >
-          {children}
-        </main>
-        <Footer />
+          <main
+            css={css`
+              flex: 1;
+              padding: 64px 16px;
+              ${maxWidth}
+            `}
+          >
+            {children}
+          </main>
+          <Footer />
+        </motion.div>
       </div>
     </>
   );
