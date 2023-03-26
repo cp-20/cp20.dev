@@ -1,11 +1,12 @@
 import { css } from '@emotion/react';
-import { Timeline, Title, Text, useMantineTheme } from '@mantine/core';
+import { Timeline, Text, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconAward, IconCertificate } from '@tabler/icons-react';
 import type { NextPage } from 'next';
 import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
+import { TitleHeading } from '@/components/Layout/TitleHeading';
 import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 import { SimpleList, SimpleListItem } from '@/components/SimpleList/SimpleList';
 import { DefaultLink } from '@/components/ui/DefaultLink';
@@ -27,16 +28,7 @@ const Profile: NextPage = () => {
       />
 
       <Layout>
-        <Title
-          order={1}
-          ff="Consolas"
-          align="center"
-          css={css`
-            margin: 32px 0;
-          `}
-        >
-          PROFILE
-        </Title>
+        <TitleHeading>PROFILE</TitleHeading>
 
         <SectionTitle subtitle="経歴">CAREER</SectionTitle>
         <Section>
