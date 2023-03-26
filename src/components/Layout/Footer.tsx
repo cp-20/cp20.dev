@@ -31,7 +31,7 @@ export const Footer: FC = () => {
             gap: 8px;
           `}
         >
-          {socials.map((social) => (
+          {socials('md').map((social) => (
             <ActionIconLink key={social.url} href={social.url} variant="filled">
               {social.icon}
             </ActionIconLink>
