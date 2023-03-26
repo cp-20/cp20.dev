@@ -2,6 +2,14 @@ export const pagesPath = {
   "profile": {
     $url: (url?: { hash?: string }) => ({ pathname: '/profile' as const, hash: url?.hash })
   },
+  "works": {
+    "dicespec": {
+      $url: (url?: { hash?: string }) => ({ pathname: '/works/dicespec' as const, hash: url?.hash })
+    },
+    "no_log_chat": {
+      $url: (url?: { hash?: string }) => ({ pathname: '/works/no-log-chat' as const, hash: url?.hash })
+    }
+  },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
 }
 
