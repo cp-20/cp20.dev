@@ -19,11 +19,17 @@ export const Responsive3ColumnsGrid: FC<ResponsiveGridProps> = ({
 );
 
 export const Responsive2ColumnsGrid: FC<ResponsiveGridProps> = (props) => (
-  <SimpleGrid cols={2} breakpoints={[{ maxWidth: 800, cols: 1 }]} {...props} />
+  <SimpleGrid
+    cols={2}
+    breakpoints={[{ maxWidth: 800, cols: 1 }]}
+    maw="800px"
+    mx="auto"
+    {...props}
+  />
 );
 
 export const Responsive1ColumnsGrid: FC<ResponsiveGridProps> = (props) => (
-  <SimpleGrid cols={1} {...props} />
+  <SimpleGrid cols={1} maw="400px" mx="auto" {...props} />
 );
 
 export const ResponsiveGrid: FC<ResponsiveGridProps> = ({
