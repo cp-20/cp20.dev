@@ -5,8 +5,10 @@ import Link from 'next/link';
 import type { AnchorHTMLAttributes, FC } from 'react';
 import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 
-export const useLink = (href: string) => {
-  const isExternalUrl = !href.startsWith('/');
+export const useLink = (href: LinkProps['href']) => {
+  const url = typeof href === 'string' ? href : href.pathname ?? '';
+  const isExternalUrl = !url.startsWith('/');
+  console.log(href, isExternalUrl);
 
   return {
     href,
@@ -22,8 +24,7 @@ export const DefaultLink: FC<DefaultLinkProps> = ({ href, ...props }) => {
   const { color } = useColorScheme();
   const { colors } = useMantineTheme();
 
-  const url = typeof href === 'string' ? href : href.hostname;
-  const hrefObject = useLink(url ?? '');
+  const hrefObject = useLink(href);
 
   return (
     <Link
