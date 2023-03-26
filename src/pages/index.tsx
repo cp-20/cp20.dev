@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Description
-        title="しーぴー"
+        title="cp20.dev"
         description="しーぴーくんの生態がわかるサイトです"
       />
 
