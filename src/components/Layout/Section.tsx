@@ -29,7 +29,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       duration: 0.5,
       scrollTrigger: {
         trigger: titleRef.current,
-        start: '50% 60%',
+        start: '50% 90%',
       },
     });
 
@@ -40,7 +40,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       duration: 0.5,
       scrollTrigger: {
         trigger: titleRef.current,
-        start: '50% 60%',
+        start: '50% 90%',
       },
     });
 
@@ -51,7 +51,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
       duration: 0.3,
       scrollTrigger: {
         trigger: titleRef.current,
-        start: '50% 60%',
+        start: '50% 90%',
       },
     });
   }, [id]);
@@ -133,5 +133,29 @@ type SectionProps = {
 };
 
 export const Section: FC<SectionProps> = ({ children }) => {
-  return <div>{children}</div>;
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    gsap.to(sectionRef.current, {
+      y: 0,
+      autoAlpha: 1,
+      ease: 'power4.out',
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: '50% 90%',
+      },
+    });
+  }, []);
+
+  return (
+    <div
+      ref={sectionRef}
+      css={css`
+        opacity: 0;
+        transform: translateY(-32px);
+      `}
+    >
+      {children}
+    </div>
+  );
 };
