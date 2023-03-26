@@ -37,7 +37,6 @@ export const Header: FC = () => {
             display: flex;
             align-items: center;
             padding: 12px 16px;
-            color: inherit;
             text-decoration: none;
             transition: all 0.2s;
 
@@ -68,7 +67,7 @@ export const Header: FC = () => {
           <span
             css={css`
               margin-left: 8px;
-              color: ${color(colors.gray[7], colors.gray[4])};
+              color: ${color(colors.gray[8], colors.gray[3])};
               font-family: Consolas, sans-serif;
               font-size: 1.2rem;
               font-weight: bold;
