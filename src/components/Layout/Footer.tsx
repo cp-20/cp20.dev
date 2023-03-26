@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import { maxWidth } from '@/components/Layout/Layout';
 import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 import { ActionIconLink } from '@/components/ui/ActionIconLink';
-import { socials } from '@/lib/socials';
+import { socials } from '@/lib/data/socials';
 
 export const Footer: FC = () => {
   const { color } = useColorScheme();

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { skill } from '@/lib/skills';
+import type { skill } from '@/lib/data/skills';
 
 type sortTabId = 'category' | 'level';
 

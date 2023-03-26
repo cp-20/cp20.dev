@@ -4,7 +4,7 @@ import { Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Prism } from '@mantine/prism';
 import type { ButtonHTMLAttributes, FC } from 'react';
-import type { skill } from '@/lib/skills';
+import type { skill } from '@/lib/data/skills';
 
 type ViewRawDataButtonProps = {
   skills: skill[];

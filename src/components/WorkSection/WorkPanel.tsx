@@ -5,7 +5,7 @@ import type { FC } from 'react';
 import { ClickablePanel } from '@/components/ClickablePanel/ClickablePanel';
 import { PanelDescription } from '@/components/ClickablePanel/PanelDescription';
 import { PanelTitle } from '@/components/ClickablePanel/PanelTitle';
-import type { work } from '@/lib/works';
+import type { work } from '@/lib/data/works';
 
 type WorkPanelProps = {
   work: work;

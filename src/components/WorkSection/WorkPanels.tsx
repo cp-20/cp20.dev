@@ -1,7 +1,7 @@
 import { SimpleGrid } from '@mantine/core';
 import type { FC } from 'react';
 import { WorkPanel } from '@/components/WorkSection/WorkPanel';
-import { works } from '@/lib/works';
+import { works } from '@/lib/data/works';
 
 export const WorkPanels: FC = () => {
   return (

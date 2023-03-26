@@ -14,7 +14,7 @@ import { ActionIconLink } from '@/components/ui/ActionIconLink';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { DefaultLink } from '@/components/ui/DefaultLink';
 import { pagesPath, staticPath } from '@/lib/$path';
-import { socials } from '@/lib/socials';
+import { socials } from '@/lib/data/socials';
 
 export const Profile: FC = () => {
   const { color, colorScheme } = useColorScheme();

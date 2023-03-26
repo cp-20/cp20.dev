@@ -12,7 +12,7 @@ import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 import { SkillPanels } from '@/components/SkillSection/SkillPanels';
 import { ViewRawDataButton } from '@/components/SkillSection/ViewRawDataButton';
 import { useSKillSorting } from '@/components/SkillSection/uesSkillSorting';
-import { skills } from '@/lib/skills';
+import { skills } from '@/lib/data/skills';
 
 const LabelContainer: FC<{ children: ReactNode }> = ({ children }) => {
   return (
