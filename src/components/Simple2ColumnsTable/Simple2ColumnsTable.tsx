@@ -24,20 +24,31 @@ export const Simple2ColumnsTable: FC<Simple2ColumnsTableProps> = ({
       {...props}
       css={css`
         border-spacing: 8px;
+
+        th {
+          padding-right: 16px;
+          color: ${color(colors.gray[7], colors.gray[3])};
+          text-align: right;
+        }
+
+        @media screen and (max-width: 720px) {
+          border-spacing: 16px;
+
+          th {
+            text-align: left;
+          }
+
+          th,
+          td {
+            display: block;
+          }
+        }
       `}
     >
       <tbody>
         {data.map((row, i) => (
           <tr key={i}>
-            <th
-              css={css`
-                padding-right: 16px;
-                color: ${color(colors.gray[7], colors.gray[3])};
-                text-align: right;
-              `}
-            >
-              {row.heading}
-            </th>
+            <th>{row.heading}</th>
             <td>{row.content}</td>
           </tr>
         ))}

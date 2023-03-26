@@ -29,7 +29,7 @@ export const AppOverview: FC<AppOverviewProps> = ({ work }) => {
             {
               heading: 'リポジトリ',
               content: (
-                <Flex gap={8}>
+                <Flex gap={8} wrap="wrap">
                   {work.repositories.map((repo, i) => (
                     <DefaultLink key={repo} href={repo}>
                       {repositoriesPath[i]}
