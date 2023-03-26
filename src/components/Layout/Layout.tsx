@@ -40,6 +40,11 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
             damping: 20,
             duration: 0.5,
           }}
+          css={css`
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+          `}
         >
           <main
             css={css`
