@@ -1,10 +1,9 @@
-import { css } from '@emotion/react';
-import { Title } from '@mantine/core';
 import type { NextPage } from 'next';
 import { ArticlePanels } from '@/components/ArticleSection/ArticlePanels';
 import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
+import { TitleHeading } from '@/components/Layout/TitleHeading';
 import { PresentationPanels } from '@/components/PresentationSection/PresentationPanels';
 import { Profile } from '@/components/ProfileSection/Profile';
 import { SkillSection } from '@/components/SkillSection/SkillSection';
@@ -19,16 +18,7 @@ const Home: NextPage = () => {
       />
 
       <Layout>
-        <Title
-          order={1}
-          ff="Consolas"
-          align="center"
-          css={css`
-            margin: 32px 0;
-          `}
-        >
-          cp20.dev
-        </Title>
+        <TitleHeading>cp20.dev</TitleHeading>
 
         <SectionTitle subtitle="経歴やら自己紹介やら">PROFILE</SectionTitle>
         <Section>

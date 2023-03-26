@@ -28,7 +28,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
         <main
           css={css`
             flex: 1;
-            padding: 16px;
+            padding: 64px 16px;
             ${maxWidth}
           `}
         >
