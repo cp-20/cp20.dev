@@ -1,15 +1,10 @@
 import { css } from '@emotion/react';
 import { useMantineTheme } from '@mantine/core';
-import {
-  IconBrandDiscordFilled,
-  IconBrandGithubFilled,
-  IconBrandTwitterFilled,
-} from '@tabler/icons-react';
 import type { FC } from 'react';
-import { QiitaIcon, ZennIcon } from '@/components/Icons/SVGIcons';
 import { maxWidth } from '@/components/Layout/Layout';
 import { SocialLinkButton } from '@/components/Layout/SocialLinkButton';
 import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
+import { socials } from '@/lib/socials';
 
 export const Footer: FC = () => {
   const { color } = useColorScheme();
@@ -36,21 +31,11 @@ export const Footer: FC = () => {
             gap: 8px;
           `}
         >
-          <SocialLinkButton href="https://zenn.dev/cp20">
-            <ZennIcon size="1rem" />
-          </SocialLinkButton>
-          <SocialLinkButton href="https://qiita.com/cp20">
-            <QiitaIcon size="1rem" />
-          </SocialLinkButton>
-          <SocialLinkButton href="https://twitter.com/__cp20__">
-            <IconBrandTwitterFilled size="1.125rem" />
-          </SocialLinkButton>
-          <SocialLinkButton href="https://github.com/cp-20">
-            <IconBrandGithubFilled size="1.125rem" />
-          </SocialLinkButton>
-          <SocialLinkButton href="https://discord.gg/YQ7negGTUK">
-            <IconBrandDiscordFilled size="1.125rem" />
-          </SocialLinkButton>
+          {socials.map((social) => (
+            <SocialLinkButton key={social.url} href={social.url}>
+              {social.icon}
+            </SocialLinkButton>
+          ))}
         </div>
       </div>
     </footer>
