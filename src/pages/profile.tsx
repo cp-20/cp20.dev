@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
-import { Timeline, Text, useMantineTheme } from '@mantine/core';
+import { Timeline, Text, useMantineTheme, Center } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { IconAward, IconCertificate } from '@tabler/icons-react';
 import type { NextPage } from 'next';
+import { BackToTopButton } from '@/components/BackToTopButton/BackToTopButton';
 import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
@@ -123,6 +124,10 @@ const Profile: NextPage = () => {
             ))}
           </SimpleList>
         </Section>
+
+        <Center mt={64}>
+          <BackToTopButton />
+        </Center>
       </Layout>
     </>
   );
