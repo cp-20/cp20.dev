@@ -6,6 +6,11 @@ export type award = {
 
 export const awards: award[] = [
   {
+    name: 'MAKERS UNIVERSITY U-18 8期生 採択',
+    url: 'https://u-18.makers-u.jp/',
+    date: '2023/02',
+  },
+  {
     name: 'Microsoft Imagine Cup 2022 アジア教育部門優勝',
     url: 'https://techcommunity.microsoft.com/t5/student-developer-blog/meet-the-top-3-teams-of-the-2022-imagine-cup/ba-p/3274948',
     date: '2022/03',
