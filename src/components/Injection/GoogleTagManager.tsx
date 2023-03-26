@@ -1,17 +1,12 @@
 import Script from 'next/script';
 import type { FC } from 'react';
 
-type GoogleTagManagerProps = {
-  nonce: string;
-};
-
-export const GoogleTagManager: FC<GoogleTagManagerProps> = ({ nonce }) => {
+export const GoogleTagManager: FC = () => {
   const id = process.env.NEXT_PUBLIC_GTM_ID;
 
   if (id) {
     return (
       <Script
-        nonce={nonce}
         id="gtm"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{

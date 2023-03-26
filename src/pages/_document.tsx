@@ -1,10 +1,7 @@
 import { ServerStyles, createStylesServer } from '@mantine/next';
 import type { DocumentContext } from 'next/document';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import {
-  GoogleTagManager,
-  GoogleTagManagerBody,
-} from '@/components/Injection/GoogleTagManager';
+import { GoogleTagManagerBody } from '@/components/Injection/GoogleTagManager';
 import { staticPath } from '@/lib/$path';
 import { generateCsp } from '@/lib/generateCsp';
 
@@ -43,8 +40,6 @@ export default class _Document extends Document<DocumentProps> {
       <Html lang="ja">
         <Head nonce={nonce}>
           <meta httpEquiv="Content-Security-Policy" content={csp} />
-
-          <GoogleTagManager nonce={nonce} />
 
           <link rel="icon" href={staticPath.favicon_ico} />
           <link rel="apple-touch-icon" href={staticPath.apple_touch_icon_png} />
