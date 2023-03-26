@@ -8,7 +8,12 @@ export const pagesPath = {
 export type PagesPath = typeof pagesPath
 
 export const staticPath = {
+  apple_touch_icon_png: '/apple-touch-icon.png',
   avatar_png: '/avatar.png',
+  favicon_ico: '/favicon.ico',
+  icon_192_png: '/icon-192.png',
+  icon_512_png: '/icon-512.png',
+  manifest_webmanifest: '/manifest.webmanifest',
   og_images: {
     dicespec_png: '/og-images/dicespec.png',
     no_log_chat_png: '/og-images/no-log-chat.png'
