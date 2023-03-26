@@ -1,4 +1,5 @@
-import { Loader, SimpleGrid } from '@mantine/core';
+import { css } from '@emotion/react';
+import { Center, Loader, SimpleGrid } from '@mantine/core';
 import type { FC } from 'react';
 
 import { ArticlePanel } from '@/components/ArticleSection/ArticlePanel';
@@ -10,9 +11,13 @@ export const ArticlePanels: FC = () => {
 
   if (articles.data === undefined) {
     return (
-      <div>
+      <Center
+        css={css`
+          height: 300px;
+        `}
+      >
         <Loader color="teal" />
-      </div>
+      </Center>
     );
   }
 
