@@ -70,6 +70,7 @@ export const SectionTitle: FC<SectionTitleProps> = ({ children, subtitle }) => {
 
             span {
               display: inline-block;
+              width: 1.125rem;
             }
           `}
         >
