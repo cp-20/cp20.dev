@@ -1,6 +1,7 @@
-import { Button, Center, SimpleGrid } from '@mantine/core';
+import { Button, Center } from '@mantine/core';
 import type { FC } from 'react';
 import { useState } from 'react';
+import { ResponsiveGrid } from '@/components/ResponsiveGrid/ResponsiveGrid';
 import { SkillPanel } from '@/components/SkillSection/SkillPanel';
 import { SkillTransitionWrapper } from '@/components/SkillSection/SkillTransitionWrapper';
 import type { skill } from '@/lib/data/skills';
@@ -19,13 +20,7 @@ export const SkillPanels: FC<SkillPanelsProps> = ({ skills, sortKey }) => {
 
   return (
     <>
-      <SimpleGrid
-        cols={3}
-        breakpoints={[
-          { maxWidth: 1160, cols: 2 },
-          { maxWidth: 800, cols: 1 },
-        ]}
-      >
+      <ResponsiveGrid>
         {skills
           .filter((_, i) => i < shownItemsCount)
           .map((skill, i) => (
@@ -36,7 +31,7 @@ export const SkillPanels: FC<SkillPanelsProps> = ({ skills, sortKey }) => {
               <SkillPanel skill={skill} />
             </SkillTransitionWrapper>
           ))}
-      </SimpleGrid>
+      </ResponsiveGrid>
       {shownItemsCount < skills.length && (
         <Center mt={32}>
           <Button variant="light" color="teal" onClick={showMoreItems}>

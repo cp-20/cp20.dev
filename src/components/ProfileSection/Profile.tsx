@@ -1,15 +1,9 @@
 import { css } from '@emotion/react';
-import {
-  Avatar,
-  Center,
-  Group,
-  SimpleGrid,
-  Space,
-  useMantineTheme,
-} from '@mantine/core';
+import { Avatar, Center, Group, Space, useMantineTheme } from '@mantine/core';
 import type { FC } from 'react';
 import { useColorScheme } from '@/components/MantineProvider/useColorScheme';
 import { ProfileMessage } from '@/components/ProfileSection/ProfileMessage';
+import { ResponsiveGrid } from '@/components/ResponsiveGrid/ResponsiveGrid';
 import { ActionIconLink } from '@/components/ui/ActionIconLink';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { DefaultLink } from '@/components/ui/DefaultLink';
@@ -21,9 +15,7 @@ export const Profile: FC = () => {
   const { colors } = useMantineTheme();
 
   return (
-    <SimpleGrid
-      cols={2}
-      breakpoints={[{ maxWidth: 480, cols: 1 }]}
+    <ResponsiveGrid
       css={css`
         max-width: 720px;
         margin: 0 auto;
@@ -138,6 +130,6 @@ export const Profile: FC = () => {
           もっと見る
         </ButtonLink>
       </div>
-    </SimpleGrid>
+    </ResponsiveGrid>
   );
 };

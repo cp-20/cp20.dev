@@ -1,14 +1,14 @@
-import { SimpleGrid } from '@mantine/core';
 import type { FC } from 'react';
+import { ResponsiveGrid } from '@/components/ResponsiveGrid/ResponsiveGrid';
 import { WorkPanel } from '@/components/WorkSection/WorkPanel';
 import { works } from '@/lib/data/works';
 
 export const WorkPanels: FC = () => {
   return (
-    <SimpleGrid cols={2} breakpoints={[{ maxWidth: 800, cols: 1 }]}>
+    <ResponsiveGrid>
       {works.map((work) => (
         <WorkPanel key={work.id} work={work} />
       ))}
-    </SimpleGrid>
+    </ResponsiveGrid>
   );
 };
