@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import type { FC } from 'react';
 
-const appUrl = '';
+const appUrl = 'https://cp20.dev';
 
 type DescriptionProps = {
   title: string;
