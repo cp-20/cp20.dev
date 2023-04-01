@@ -69,6 +69,10 @@ export const SkillSection: FC = () => {
           grid-template-columns: 100px 1fr;
           row-gap: 4px;
           word-break: keep-all;
+
+          @media screen and (max-width: 400px) {
+            word-break: normal;
+          }
         `}
       >
         <Rating value={0} count={4} readOnly />
