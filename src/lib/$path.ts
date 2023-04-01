@@ -26,6 +26,7 @@ export const staticPath = {
     dicespec_png: '/og-images/dicespec.png',
     no_log_chat_png: '/og-images/no-log-chat.png'
   },
+  ogp_png: '/ogp.png',
   presentation_images: {
     mstechcamp_19_png: '/presentation-images/mstechcamp-19.png',
     mstechcamp_2th_anniversary_png: '/presentation-images/mstechcamp-2th-anniversary.png'
