@@ -6,6 +6,11 @@ export type award = {
 
 export const awards: award[] = [
   {
+    name: '千葉市教育・文化・スポーツ等功労者賞',
+    url: 'https://www.city.chiba.jp/somu/shichokoshitsu/hisho/40kyouikubunkasports.html',
+    date: '2023/03',
+  },
+  {
     name: 'MAKERS UNIVERSITY U-18 8期生 採択',
     url: 'https://u-18.makers-u.jp/',
     date: '2023/02',
