@@ -16,4 +16,9 @@ export const works: work[] = [
     name: 'のーろぐちゃっと',
     description: 'ログが残らないチャットでみんなと会話しよう！',
   },
+  {
+    id: 'titech-lecture-list',
+    name: '東工大講義リスト',
+    description: '東工大の講義を検索できるサービスです。',
+  },
 ];

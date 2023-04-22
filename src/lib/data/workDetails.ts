@@ -60,4 +60,12 @@ export const workDetails = {
       },
     ],
   },
+  'titech-lecture-list': {
+    name: '東工大講義リスト',
+    url: 'https://titech-lecture-list.vercel.app/',
+    productionPeriod: '2022/06/05～2022/06/11',
+    repositories: ['https://github.com/cp-20/titech-lecture-list'],
+    techStack: 'Next.js, Mantine UI',
+    relatedArticles: [],
+  },
 } satisfies Record<string, workDetail>;

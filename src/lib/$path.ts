@@ -8,6 +8,9 @@ export const pagesPath = {
     },
     "no_log_chat": {
       $url: (url?: { hash?: string }) => ({ pathname: '/works/no-log-chat' as const, hash: url?.hash })
+    },
+    "titech_lecture_list": {
+      $url: (url?: { hash?: string }) => ({ pathname: '/works/titech-lecture-list' as const, hash: url?.hash })
     }
   },
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
@@ -24,7 +27,8 @@ export const staticPath = {
   manifest_webmanifest: '/manifest.webmanifest',
   og_images: {
     dicespec_png: '/og-images/dicespec.png',
-    no_log_chat_png: '/og-images/no-log-chat.png'
+    no_log_chat_png: '/og-images/no-log-chat.png',
+    titech_lecture_list_png: '/og-images/titech-lecture-list.png'
   },
   ogp_png: '/ogp.png',
   presentation_images: {
