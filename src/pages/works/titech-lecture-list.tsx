@@ -16,7 +16,7 @@ const NoLogChatWork: NextPage = () => {
     <>
       <Description
         title="東工大講義リスト | cp20.dev"
-        description="「ログが残らないチャットでみんなと会話しよう！」"
+        description="TOKYO TECH OCWから取得した講義リストを提供しています。高速な検索・絞り込みが可能です。"
       />
 
       <Layout>
