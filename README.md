@@ -1,14 +1,7 @@
-# Next.js with Mantine UI Template
+# [cp20.dev](https://cp20.dev)
 
-Next.js を Mantine UI と一緒に色々セットアップしてあるオレオレテンプレートリポジトリです。ご利用は計画的に。
+しーぴー君のポートフォリオサイトです
 
-## 技術スタック
+個人情報モリモリです
 
-- Next.js v13
-- Mantine UI v6
-- Jotai
-- Emotion
-
-- ESlint
-- Prettier
-- Stylelint
+![](/public/ogp.png)
