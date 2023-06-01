@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { ArticlePanels } from '@/components/ArticleSection/ArticlePanels';
+import { ContactSection } from '@/components/ContactSection/ContactSection';
 import { Description } from '@/components/Description/Description';
 import { Layout } from '@/components/Layout/Layout';
 import { Section, SectionTitle } from '@/components/Layout/Section';
@@ -45,6 +46,11 @@ const Home: NextPage = () => {
         </SectionTitle>
         <Section>
           <PresentationPanels />
+        </Section>
+
+        <SectionTitle subtitle="お問い合わせ">CONTACT</SectionTitle>
+        <Section>
+          <ContactSection />
         </Section>
       </Layout>
     </>
