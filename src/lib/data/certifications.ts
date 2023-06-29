@@ -5,6 +5,10 @@ export type certification = {
 
 export const certification: certification[] = [
   {
+    name: '応用情報技術者試験 (AP)',
+    date: '2023',
+  },
+  {
     name: '実用英語技能検定 (英検) 準1級',
     date: '2021',
   },
